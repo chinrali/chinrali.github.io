@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurante Chin Ra-Li</title>
+    <style>
+        body {
+            background: #fffbe7;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #e63946;
+            color: #fff;
+            padding: 30px 0 10px 0;
+            text-align: center;
+            border-bottom: 5px solid #f1c40f;
+        }
+        header img {
+            width: 80px;
+            vertical-align: middle;
+        }
+        h1 {
+            display: inline;
+            font-size: 2.5em;
+            margin-left: 15px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #e6394633;
+            padding: 30px;
+        }
+        .menu-section {
+            margin-bottom: 30px;
+        }
+        .menu-section h2 {
+            color: #e63946;
+            border-bottom: 2px dashed #f1c40f;
+            padding-bottom: 5px;
+        }
+        ul.menu-list {
+            list-style: none;
+            padding: 0;
+        }
+        ul.menu-list li {
+            margin: 12px 0;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .precio {
+            color: #f1c40f;
+            font-weight: bold;
+            margin-left: auto;
+            padding-right: 15px;
+        }
+        .add-to-cart {
+            background: #e63946;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .add-to-cart:hover {
+            background: #d62828;
+        }
+        .satira {
+            background: #f1c40f33;
+            border-left: 5px solid #e63946;
+            padding: 15px;
+            margin: 30px 0 0 0;
+            font-style: italic;
+        }
+        #cart-section {
+            margin-top: 40px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #e63946;
+        }
+        #cart-section h2 {
+            color: #e63946;
+            margin-top: 0;
+        }
+        #cart-items li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #cart-total {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            margin-left: 10px;
+        }
+        #pay-button {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        #pay-button:hover {
+            background: #218838;
+        }
+        footer {
+            background: #e63946;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://e7.pngegg.com/pngimages/141/811/png-clipart-china-chinese-dragon-chinese-characters-chinese-style-dragon-monochrome-thumbnail.png" alt="Dragón" />
+        <h1>Restaurante Chin Ra-Li</h1>
+        <div style="font-size:1.1em; margin-top:10px;">¡Donde el arroz nunca se acaba y el pollo... tampoco es pollo!</div>
+    </header>
+    <div class="container">
+        <div class="menu-section">
+            <h2>Entrantes</h2>
+            <ul class="menu-list">
+                <li>Rollito de primavera con longaniza <span class="precio">2.57€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Rollito de primavera con longaniza" data-price="2.57">Añadir</button></li>
+                <li>Rollito de primavera con chorizo <span class="precio">2.56€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Rollito de primavera con chorizo" data-price="2.56">Añadir</button></li>
+                <li>Ensalada China Agrisalada <span class="precio">4.88€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Ensalada China Agrisalada" data-price="4.88">Añadir</button></li>
+                <li>Gyozas con longaniza de requena <span class="precio">6.22€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Gyozas con longaniza de requena" data-price="6.22">Añadir</button></li>
+                <li>Pan de gamba <span class="precio">3.01€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Pan de gamba" data-price="3.01">Añadir</button></li>
+            </ul>
+        </div>
+        <div class="menu-section">
+            <h2>Sopas</h2>
+            <ul class="menu-list">
+                <li>Sopa de aleta de tiburón del Magro <span class="precio">1.48€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Sopa de aleta de tiburón del Magro" data-price="1.48">Añadir</button></li>
+                <li>Sopa de Hongos del Tejo <span class="precio">1.92€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Sopa de Hongos del Tejo" data-price="1.92">Añadir</button></li>
+            </ul>
+        </div>
+        <div class="menu-section">
+            <h2>ESPECIALIDADES</h2>
+            <ul class="menu-list">
+                <li>Tallarines fritos cuatro delicias <span class="precio">6.98€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Tallarines fritos cuatro delicias" data-price="6.98">Añadir</button></li>
+                <li>Pollo al limón <span class="precio">7.94€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Pollo al limón" data-price="7.94">Añadir</button></li>
+                <li>Pato a la requenense <span class="precio">35.99€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Pato a la requenense" data-price="35.99">Añadir</button></li>
+                <li>Pato a la utielana (contiene alérgenos) <span class="precio">0.99€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Pato a la utielana (contiene alérgenos)" data-price="0.99">Añadir</button></li>
+                <li>Hormigas en el árbol <span class="precio">12.12€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Hormigas en el árbol" data-price="12.12">Añadir</button></li>
+            </ul>
+        </div>
+        <div class="menu-section">
+            <h2>Postres</h2>
+            <ul class="menu-list">
+                <li>Helado frito <span class="precio">3.48€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Helado frito" data-price="3.48">Añadir</button></li>
+                <li>Galleta de la fortuna (siempre acierta) <span class="precio">1.02€</span><input type="number" class="quantity-input" value="1" min="1"><button class="add-to-cart" data-name="Galleta de la fortuna (siempre acierta)" data-price="1.02">Añadir</button></li>
+            </ul>
+        </div>
+        <div class="satira">
+            Todos nuestros platos pueden contener trazas de cucarachas, ratas o ingredientes secretos que ni nosotros conocemos. Si encuentra un premio en su rollito, ¡felicidades! Ha ganado una noche gratis en la cocina ayudando al chef.
+            <br><br>
+            <em>Restaurante Chin Ra-Li: Donde la cuenta siempre trae sorpresa.</em>
+        </div>
+        <div id="cart-section">
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items">
+                <!-- Los productos del carrito se añadirán aquí -->
+            </ul>
+            <p>Total: <span id="cart-total">0.00</span>€</p>
+            <button id="pay-button">Proceder al Pago</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Restaurante Chin Ra-Li - Requena | Repartimos a domicilio | Síguenos en <a href="https://www.instagram.com/cocherallye71" style="color:#f1c40f;">@cocherally71</a>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
