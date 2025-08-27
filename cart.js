@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     payButton.addEventListener('click', () => {
-        alert('Lo sentimos, estamos cerrados');
+        alert('Lo sentimos, estamos borrachos');
     });
 
     function addToCart(name, price, quantity) {
